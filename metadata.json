@@ -1,0 +1,8 @@
+{
+  "name": "Luxe Real Estate",
+  "description": "A modern, mobile-friendly real estate landing page featuring property listings and agency services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

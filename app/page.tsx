@@ -3,69 +3,9 @@ import { PropertyCard } from '@/components/PropertyCard';
 import { Footer } from '@/components/Footer';
 import { Search, MapPin, Shield, Star, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const FEATURED_PROPERTIES = [
-  {
-    id: '1',
-    image: 'https://picsum.photos/seed/house1/800/600',
-    price: '$2,450,000',
-    title: 'Modern Architectural Masterpiece',
-    address: '1428 Sunset Boulevard, Los Angeles, CA',
-    beds: 4,
-    baths: 4.5,
-    sqft: 3800
-  },
-  {
-    id: '2',
-    image: 'https://picsum.photos/seed/house2/800/600',
-    price: '$1,295,000',
-    title: 'Luxury Waterfront Condo',
-    address: '88 Biscayne Bay Rd, Miami, FL',
-    beds: 2,
-    baths: 2,
-    sqft: 1850
-  },
-  {
-    id: '3',
-    image: 'https://picsum.photos/seed/house3/800/600',
-    price: '$3,800,000',
-    title: 'Classic Stone Manor',
-    address: '55 Greenwich Lane, Greenwich, CT',
-    beds: 6,
-    baths: 7,
-    sqft: 6500
-  },
-  {
-    id: '4',
-    image: 'https://picsum.photos/seed/house4/800/600',
-    price: '$890,000',
-    title: 'Downtown Penthouse Loft',
-    address: '400 N Michigan Ave, Chicago, IL',
-    beds: 3,
-    baths: 2.5,
-    sqft: 2200
-  },
-  {
-    id: '5',
-    image: 'https://picsum.photos/seed/house5/800/600',
-    price: '$1,750,000',
-    title: 'Desert Oasis Retreat',
-    address: '77 Paradise Valley, Scottsdale, AZ',
-    beds: 4,
-    baths: 3,
-    sqft: 3100
-  },
-  {
-    id: '6',
-    image: 'https://picsum.photos/seed/house6/800/600',
-    price: '$4,200,000',
-    title: 'Oceanfront Villa',
-    address: '1000 Pacific Coast Hwy, Malibu, CA',
-    beds: 5,
-    baths: 6,
-    sqft: 5400
-  }
-];
+import { FEATURED_PROPERTIES } from '@/lib/data';
 
 export default function Home() {
   return (
@@ -120,9 +60,9 @@ export default function Home() {
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Featured Listings</h2>
               <p className="text-slate-600 max-w-2xl text-lg">Explore our hand-picked selection of premium properties across the country.</p>
             </div>
-            <button className="text-slate-900 font-medium hover:text-slate-600 transition-colors whitespace-nowrap">
+            <Link href="/properties" className="text-slate-900 font-medium hover:text-slate-600 transition-colors whitespace-nowrap">
               View all properties &rarr;
-            </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,9 +116,9 @@ export default function Home() {
           <p className="text-slate-300 text-lg sm:text-xl mb-10 max-w-2xl mx-auto font-light">
             Connect with one of our luxury agents today to start your bespoke real estate journey.
           </p>
-          <button className="bg-white text-slate-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-slate-100 transition-colors shadow-lg">
+          <Link href="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-slate-100 transition-colors shadow-lg inline-block">
             Schedule a Consultation
-          </button>
+          </Link>
         </div>
       </section>
 
